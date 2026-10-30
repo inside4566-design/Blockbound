@@ -1,0 +1,39 @@
+<!doctype html>
+<html lang="th">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width,initial-scale=1,maximum-scale=1,user-scalable=no">
+<title>Blockbound — 2D Sandbox Adventure</title>
+<link rel="stylesheet" href="style.css">
+</head>
+<body>
+<div id="gameShell">
+  <header class="topbar">
+    <div class="brand"><span class="gem">◆</span> BLOCKBOUND <small>2D SANDBOX ADVENTURE</small></div>
+    <div class="top-actions"><span id="worldLabel">WORLD 01</span><button id="saveBtn">บันทึก</button><button id="resetBtn" title="เริ่มโลกใหม่">โลกใหม่</button></div>
+  </header>
+  <main id="stage">
+    <canvas id="game" aria-label="เกมผจญภัย 2 มิติ"></canvas>
+    <div class="hud">
+      <div class="status">
+        <div class="hearts" id="hearts"></div>
+        <div class="substatus"><span>☀ DAY <b id="day">1</b></span><span>✦ <b id="coins">0</b> COINS</span></div>
+      </div>
+      <div class="hint" id="hint">A / D เดิน · Space กระโดด · คลิกซ้ายขุด · คลิกขวาวาง</div>
+    </div>
+    <div id="toast"></div>
+    <div class="mobile-controls">
+      <div class="move-controls"><button data-key="a">◀</button><button data-key="d">▶</button></div>
+      <div class="action-controls"><button data-key=" " class="jump">กระโดด</button><button id="mobileMine">⛏ ขุด</button><button id="mobilePlace">▧ วาง</button></div>
+    </div>
+  </main>
+  <section class="inventory">
+    <div class="inventory-title">กระเป๋า <span>เลือกช่องด้วย 1–6</span></div>
+    <div id="hotbar"></div>
+    <div class="inventory-note">คลิกช่องเพื่อเลือกไอเทม · เก็บทรัพยากรจากการขุด</div>
+  </section>
+  <footer><span>สำรวจ • ขุด • สร้าง • เอาชีวิตรอด</span><span>Autosave ในเครื่องนี้</span></footer>
+</div>
+<script src="game.js"></script>
+</body>
+</html>

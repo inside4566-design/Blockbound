@@ -1,0 +1,23 @@
+*{box-sizing:border-box} :root{--ink:#eaf3ff;--muted:#9fb4ca;--panel:#101d2b;--line:#29445b;--gold:#ffc85a}
+html,body{margin:0;min-height:100%;background:#08131e;color:var(--ink);font-family:Inter,system-ui,-apple-system,"Segoe UI",sans-serif}
+body{display:flex;justify-content:center;padding:14px}
+#gameShell{width:min(1120px,100%);border:1px solid #29465e;border-radius:18px;overflow:hidden;background:#0d1a27;box-shadow:0 24px 80px #0009}
+.topbar{height:58px;display:flex;align-items:center;justify-content:space-between;padding:0 18px;background:linear-gradient(90deg,#12283a,#17283a);border-bottom:1px solid var(--line)}
+.brand{font-weight:950;letter-spacing:2px;font-size:15px}.brand small{display:block;color:#8ea9bd;font-size:8px;letter-spacing:3px;margin-left:22px}.gem{color:#71e3c0;margin-right:6px}
+.top-actions{display:flex;align-items:center;gap:9px;color:#9db5c9;font-size:11px;font-weight:800;letter-spacing:1px}
+button{font:inherit;color:inherit;border:1px solid #3a5870;background:#1a3043;border-radius:8px;padding:8px 12px;cursor:pointer}button:hover{background:#29465d}
+#stage{position:relative;height:min(66vw,590px);min-height:340px;background:#75b8e5;overflow:hidden}
+canvas{display:block;width:100%;height:100%;image-rendering:pixelated;cursor:crosshair;touch-action:none;-webkit-user-select:none;user-select:none}
+.hud{position:absolute;inset:12px 14px auto;display:flex;justify-content:space-between;align-items:flex-start;pointer-events:none}
+.status{background:#091827c9;border:1px solid #ffffff24;border-radius:10px;padding:8px 11px;min-width:130px}
+.hearts{font-size:18px;letter-spacing:2px;color:#ff6575;text-shadow:0 2px #7c2433}.substatus{display:flex;gap:12px;margin-top:3px;font-size:9px;letter-spacing:1px;color:#b5cadb}.substatus b{color:#fff}
+.hint{background:#091827b8;border:1px solid #ffffff22;border-radius:8px;padding:8px 11px;font-size:10px;color:#e4f2ff}
+#toast{position:absolute;top:72px;left:50%;transform:translateX(-50%);background:#10283be8;border:1px solid #5b829e;border-radius:20px;padding:8px 15px;font-size:12px;opacity:0;transition:opacity .2s;pointer-events:none;white-space:nowrap}
+.inventory{padding:13px 18px 15px;background:linear-gradient(180deg,#122337,#0c1926);border-top:1px solid var(--line)}
+.inventory-title{font-size:11px;font-weight:900;letter-spacing:1.5px;color:#cfe0ef;margin-bottom:9px}.inventory-title span{font-weight:500;letter-spacing:0;color:#7894aa;margin-left:8px}
+#hotbar{display:flex;gap:7px;flex-wrap:wrap}.slot{width:66px;height:62px;border:1px solid #35516a;border-radius:9px;background:#182d40;position:relative;display:flex;align-items:center;justify-content:center;flex-direction:column;gap:1px;cursor:pointer}
+.slot.selected{border:2px solid var(--gold);background:#2a3a45;box-shadow:0 0 0 2px #ffc85a22}.slot .item{font-size:23px;filter:drop-shadow(0 2px 1px #0008)}.slot .name{font-size:8px;color:#b5c8d8}.slot .count{position:absolute;right:5px;bottom:3px;font-size:10px;font-weight:900;color:#fff;text-shadow:0 1px 3px #000}
+.inventory-note{margin-top:8px;color:#718da3;font-size:10px}
+footer{display:flex;justify-content:space-between;padding:9px 18px;color:#6f8aa0;font-size:9px;letter-spacing:1px;border-top:1px solid #20394e}
+.mobile-controls{display:none}
+@media(max-width:650px){body{padding:0;overscroll-behavior:none}#gameShell{border-radius:0;min-height:100vh;border:0} .topbar{height:52px;padding:0 11px}.brand{font-size:12px}.top-actions{gap:5px;font-size:9px}.top-actions button{padding:6px 8px;font-size:10px}#stage{height:65vh;min-height:380px}.hint{display:none}.inventory{padding:12px}.slot{width:calc((100vw - 68px)/6);height:58px;max-width:66px}.mobile-controls{display:flex;position:absolute;bottom:12px;left:12px;right:12px;justify-content:space-between;pointer-events:none}.mobile-controls button{pointer-events:auto;background:#0a1a2acc;border-color:#d2eaff66;min-width:43px;min-height:43px;font-weight:900}.move-controls,.action-controls{display:flex;gap:7px}.action-controls button{font-size:10px}.mobile-controls .jump{background:#23546a}footer{font-size:8px}}
